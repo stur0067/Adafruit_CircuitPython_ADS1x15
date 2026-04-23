@@ -53,7 +53,7 @@ for i in range(SAMPLES):
 
     # Loop timing
     time_last_sample = time.monotonic()
-    time_next_sample = time_next_sample + sample_interval
+    time_next_sample += sample_interval
     if time_last_sample > (time_next_sample + sample_interval):
         skips += 1
         time_next_sample = time.monotonic() + sample_interval
